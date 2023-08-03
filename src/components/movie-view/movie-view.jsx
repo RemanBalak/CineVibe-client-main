@@ -9,7 +9,7 @@ export const MovieView = ({ movies, user, setUser, token }) => {
   const [isFavorite, setIsFavorite] = useState(false);
 
   useEffect(() => {
-    const isFavorited = user.FavoriteMovies.includes(movieId);
+    const isFavorited = user.favoriteMovies.includes(movieId);
     setIsFavorite(isFavorited);
   }, []);
 
