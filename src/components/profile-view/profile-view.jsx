@@ -14,7 +14,7 @@ export const ProfileView = ({ user, token, setUser, movies, onLogout }) => {
   const [birthday, setBirthday] = useState(user.BirthDate);
   const [showModal, setShowModal] = useState(false);
   const favoriteMovies = movies.filter((movie) => {
-    return user.FavoriteMovies.includes(movie.id);
+    return user.favoriteMovies.includes(movie.id);
   });
 
   const handleShowModal = () => setShowModal(true);
