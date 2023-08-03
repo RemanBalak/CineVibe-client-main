@@ -11,11 +11,17 @@ export const SignupView = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
+    // const data = {
+    //   Username: username,
+    //   Password: password,
+    //   Email: email,
+    //   BirthDate: birthday,
+    // };
     const data = {
-      Username: username,
-      Password: password,
-      Email: email,
-      BirthDate: birthday,
+      username,
+      password,
+      email,
+      birthday,
     };
 
     fetch('https://myflixproject.onrender.com/users', {
