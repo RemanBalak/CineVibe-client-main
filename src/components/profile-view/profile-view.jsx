@@ -24,10 +24,10 @@ export const ProfileView = ({ user, token, setUser, movies, onLogout }) => {
     event.preventDefault();
 
     const data = {
-      Username: username,
-      Password: password,
-      Email: email,
-      BirthDate: birthday,
+      username,
+      password,
+      email,
+      birthday,
     };
 
     fetch(`https://myflixproject.onrender.com/users/${user.Username}`, {

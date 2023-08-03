@@ -12,10 +12,7 @@ import Form from 'react-bootstrap/Form';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 export const MainView = () => {
-  const storedUser = { localStorage };
-  localStorage.setItem('user', JSON.stringify(storedUser));
-
-  // const storedUser = JSON.parse(localStorage.getItem('user'));
+  const storedUser = JSON.parse(localStorage.getItem('user'));
   const storedToken = localStorage.getItem('token');
   const [user, setUser] = useState(storedUser ? storedUser : null);
   const [token, setToken] = useState(storedToken ? storedToken : null);
