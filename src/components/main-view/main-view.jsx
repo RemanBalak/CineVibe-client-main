@@ -12,7 +12,18 @@ export const MainView = () => {
   const storedUser = localStorage.getItem('user');
   const storedToken = localStorage.getItem('token');
   const [movies, setMovies] = useState([]);
-  const [user, setUser] = useState(storedUser ? JSON.parse(storedUser) : null);
+
+  let parsedUser = null;
+  if (storedUser) {
+    try {
+      parsedUser = JSON.parse(storedUser);
+    } catch (error) {
+      // Handle the error if the JSON is invalid
+      console.error('Error parsing storedUser:', error);
+    }
+  }
+
+  const [user, setUser] = useState(parsedUser);
   const [token, setToken] = useState(storedToken ? storedToken : null);
   const [viewMovies, setViewMovies] = useState(movies);
 
