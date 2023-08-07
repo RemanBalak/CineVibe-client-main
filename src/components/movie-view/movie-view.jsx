@@ -23,7 +23,7 @@ export const MovieView = ({ movies, user, token, updateUser }) => {
 
   const addFavorite = () => {
     fetch(
-      `https://myflixapi-11d1.onrender.com/users/${user.username}/movies/${movieId}`,
+      `https://myflixproject.onrender.com/users/${user.username}/movies/${movieId}`,
       {
         method: 'POST',
         headers: { Authorization: `Bearer ${token}` },
@@ -51,7 +51,7 @@ export const MovieView = ({ movies, user, token, updateUser }) => {
 
   const removeFavorite = () => {
     fetch(
-      `https://myflixapi-11d1.onrender.com/users/${user.username}/movies/${movieId}`,
+      `https://myflixproject.onrender.com/users/${user.username}/movies/${movieId}`,
       {
         method: 'DELETE',
         headers: { Authorization: `Bearer ${token}` },

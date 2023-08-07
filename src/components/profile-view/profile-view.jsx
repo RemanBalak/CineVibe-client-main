@@ -28,7 +28,7 @@ export const ProfileView = ({
       birthdate,
     };
 
-    fetch(`https://myflixapi-11d1.onrender.com/users/${user.username}`, {
+    fetch(`https://myflixproject.onrender.com/users/${user.username}`, {
       method: 'PUT',
       body: JSON.stringify(data),
       headers: {
@@ -57,7 +57,7 @@ export const ProfileView = ({
 
   const deleteAccount = () => {
     console.log('doin');
-    fetch(`https://myflixapi-11d1.onrender.com/users/${user.username}`, {
+    fetch(`https://myflixproject.onrender.com/users/${user.username}`, {
       method: 'DELETE',
       headers: { Authorization: `Bearer ${token}` },
     })
