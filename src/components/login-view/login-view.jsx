@@ -1,9 +1,5 @@
-import React from 'react';
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-
-// import bootstrap components
-import { Form, Button, Row, Col } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Form, Button, Card } from 'react-bootstrap';
 
 export const LoginView = ({ onLoggedIn }) => {
   const [username, setUsername] = useState('');
@@ -19,13 +15,10 @@ export const LoginView = ({ onLoggedIn }) => {
 
     fetch('https://myflixproject.onrender.com/login', {
       method: 'POST',
-      headers: new Headers({
-        'Content-Type': 'application/json',
-      }),
-
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
     })
-      .then((res) => res.json())
+      .then((response) => response.json())
       .then((data) => {
         if (data.user) {
           localStorage.setItem('user', JSON.stringify(data.user));
@@ -35,73 +28,42 @@ export const LoginView = ({ onLoggedIn }) => {
           alert('Login failed');
         }
       })
-      .catch((error) => {
-        alert('Something went wrong');
+      .catch((e) => {
+        alert('Somethig went wrong');
       });
   };
+
   return (
-    <Form onSubmit={handleSubmit} variant="dark">
-      <Row>
-        <Col
-          sm={{ offset: 2 }}
-          md={{ offset: 4 }}
-          className="fw-bold fs-5 align-self-center mb-2 mt-4"
-        >
-          Login:{' '}
-        </Col>
-      </Row>
-      <Row>
-        <Form.Group
-          as={Col}
-          sm={{ offset: 2 }}
-          md={{ offset: 4 }}
-          controlId="formUsername"
-        >
-          <Form.Label>
-            Username:
+    <Card className="mt-2 mb-3">
+      <Card.Body>
+        <Card.Title>Log in</Card.Title>
+        <Form onSubmit={handleSubmit}>
+          <Form.Group>
+            <Form.Label>Username:</Form.Label>
             <Form.Control
-              className="text-bg-dark"
               type="text"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               required
-              placeholder="Enter your username"
+              minLength="5"
+              className="bg-light"
             />
-          </Form.Label>
-        </Form.Group>
-      </Row>
-      <Row>
-        <Form.Group
-          as={Col}
-          sm={{ offset: 2 }}
-          md={{ offset: 4 }}
-          controlId="formPassword"
-        >
-          <Form.Label>
-            Password:
+          </Form.Group>
+          <Form.Group>
+            <Form.Label>Password:</Form.Label>
             <Form.Control
-              className="text-bg-dark"
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              placeholder="Enter your password"
+              className="bg-light"
             />
-          </Form.Label>
-        </Form.Group>
-      </Row>
-      <Row>
-        <Col sm={{ offset: 2 }} md={{ offset: 4 }} className="mt-2">
-          <Button variant="primary" type="submit" className="align-self-center">
+          </Form.Group>
+          <Button className="mt-3" variant="primary" type="submit">
             Submit
           </Button>
-        </Col>
-      </Row>
-      <Row>
-        <Col sm={{ offset: 2 }} md={{ offset: 4 }} className="mt-4">
-          <Link to={`/signup`}>I don't have and account.</Link>
-        </Col>
-      </Row>
-    </Form>
+        </Form>
+      </Card.Body>
+    </Card>
   );
 };
