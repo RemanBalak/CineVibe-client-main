@@ -18,7 +18,7 @@ export const NavigationBar = ({ user, onLoggedOut, onSearch }) => {
     >
       <Container>
         <Navbar.Brand
-          style={{ color: 'red', fontSize: '30px' }}
+          style={{ color: 'red', fontSize: '25px' }}
           as={Link}
           to="/"
           onClick={() => setQuery('')}
