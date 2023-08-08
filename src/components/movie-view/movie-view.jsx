@@ -85,13 +85,15 @@ export const MovieView = ({ movies, user, token, updateUser }) => {
             className="float-start me-3 mb-2"
             src={movie.image}
             alt="Movie Cover Image"
+            style={{ maxWidth: '200px', height: 'auto' }}
           />
           <h2>
             {movie.title} ({movie.year})
           </h2>
           <p>{movie.description}</p>
-          <h4>Actors:</h4>
-          <h5>{movie.actors.join(' - ')}</h5>
+          {/* temporarily commented due not DB not having actors in collection */}
+          {/* <h4>Actors:</h4> */}
+          {/* <h5>{movie.actors.join(' - ')}</h5> */}
           <h4>Genre: </h4>
           <h5>{movie.genre}</h5>
           <p>{movie.genredescription}</p>

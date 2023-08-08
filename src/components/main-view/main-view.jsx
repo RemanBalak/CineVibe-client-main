@@ -43,17 +43,17 @@ export const MainView = () => {
         const moviesFromAPI = movies.map((movie) => {
           return {
             id: movie._id,
-            title: movie.title,
-            description: movie.description,
-            genre: movie.genre.name,
-            genredescription: movie.genre.description,
-            director: movie.director.name,
-            directorbio: movie.director.bio,
-            directorbirth: movie.director.birthyear,
-            directordeath: movie.director.deathyear,
-            actors: movie.actors,
-            year: movie.year,
-            image: movie.imageurl,
+            title: movie.Title,
+            description: movie.Description,
+            genre: movie.Genre.Name,
+            genredescription: movie.Genre.Description,
+            director: movie.Director.Name,
+            directorbio: movie.Director.Bio,
+            directorbirth: movie.Director.BirthDate,
+            directordeath: movie.Director.DeathDate,
+            actors: movie.Actors, // Assuming 'actors' property exists in the 'movie' object
+            year: movie.Year, // Assuming 'year' property exists in the 'movie' object
+            image: movie.ImagePath, // Assuming 'ImagePath' property exists in the 'movie' object
           };
         });
         setMovies(moviesFromAPI);

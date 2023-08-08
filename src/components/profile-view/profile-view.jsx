@@ -40,13 +40,13 @@ export const ProfileView = ({
         if (response.ok) {
           return response.json();
         } else {
-          alert('Changing userdata failed');
+          alert('Changing user information failed');
           return false;
         }
       })
       .then((user) => {
         if (user) {
-          alert('Successfully changed userdata');
+          alert('Successfully changed user information');
           updateUser(user);
         }
       })
@@ -88,7 +88,7 @@ export const ProfileView = ({
         <Button
           variant="danger"
           onClick={() => {
-            if (confirm('Are you sure?')) {
+            if (confirm('Are you sure? \nThis action cannot be undone')) {
               deleteAccount();
             }
           }}
