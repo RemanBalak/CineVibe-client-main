@@ -1,4 +1,4 @@
-# CineVerse Movie Database Client
+# CineVibe Movie Database Client
 
 <!-- INSERT SCREENSHOT OF HOMEPAGE -->
 
@@ -15,7 +15,7 @@ You can register an account, login, modify your account details, delete your acc
 
 ## Link to the live version
 
-The online hosted version of this app can be found here: [CineVerse](https://cinevibe.netlify.app/signup)
+The online hosted version of this app can be found here: [CineVibe](https://cinevibe.netlify.app/signup)
 
 ## How to setup the application:
 
