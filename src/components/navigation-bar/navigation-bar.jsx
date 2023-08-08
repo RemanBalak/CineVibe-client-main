@@ -13,7 +13,7 @@ export const NavigationBar = ({ user, onLoggedOut, onSearch }) => {
     <Navbar bg="dark" variant="dark" className="mb-4" sticky="top">
       <Container>
         <Navbar.Brand as={Link} to="/" onClick={() => setQuery('')}>
-          MyFlix
+          CineVerse
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
