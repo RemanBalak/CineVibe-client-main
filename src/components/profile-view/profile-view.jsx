@@ -143,7 +143,18 @@ export const ProfileView = ({
                   className="bg-light"
                 />
               </Form.Group>
-              <Button className="mt-3" variant="primary" type="submit">
+              <Button
+                style={{
+                  backgroundColor: '#e50914',
+                  color: '#fff',
+                  border: 'none',
+                  borderRadius: '5px',
+                  padding: '8px 18px',
+                }}
+                variant="primary"
+                className="mt-3"
+                type="submit"
+              >
                 Submit
               </Button>
             </Form>

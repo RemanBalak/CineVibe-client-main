@@ -10,9 +10,19 @@ export const NavigationBar = ({ user, onLoggedOut, onSearch }) => {
   }, [query]);
 
   return (
-    <Navbar bg="dark" variant="dark" className="mb-4" sticky="top">
+    <Navbar
+      style={{ backgroundColor: '#333333', textColor: 'text-light' }}
+      variant="dark"
+      className="mb-4"
+      sticky="top"
+    >
       <Container>
-        <Navbar.Brand as={Link} to="/" onClick={() => setQuery('')}>
+        <Navbar.Brand
+          style={{ color: 'red', fontSize: '30px' }}
+          as={Link}
+          to="/"
+          onClick={() => setQuery('')}
+        >
           CineVibe
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />

@@ -78,8 +78,18 @@ export const SignupView = () => {
               className="bg-light"
             />
           </Form.Group>
-          <Button className="mt-3" variant="primary" type="submit">
-            Submit
+          <Button
+            style={{
+              backgroundColor: '#e50914',
+              color: '#fff',
+              border: 'none',
+              borderRadius: '5px',
+              padding: '10px 20px',
+            }}
+            variant="primary"
+            type="submit"
+          >
+            Sign Up
           </Button>
         </Form>
       </Card.Body>
