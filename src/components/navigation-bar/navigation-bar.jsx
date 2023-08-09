@@ -1,7 +1,9 @@
-import { Navbar, Container, Nav, Form, Button } from 'react-bootstrap';
+import { Navbar, Container, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import { useSelector, useDispatch } from 'react';
+import Form from 'react-bootstrap/Form';
 import { useEffect, useState } from 'react';
-import './styles.css';
 
 export const NavigationBar = ({ user, onLoggedOut, onSearch }) => {
   const [query, setQuery] = useState('');
@@ -12,6 +14,7 @@ export const NavigationBar = ({ user, onLoggedOut, onSearch }) => {
 
   return (
     <Navbar
+      expand="lg"
       style={{ backgroundColor: '#333333', textColor: 'text-light' }}
       variant="dark"
       className="mb-4"
@@ -26,8 +29,8 @@ export const NavigationBar = ({ user, onLoggedOut, onSearch }) => {
         >
           CineVibe
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             {!user && (
               <>
@@ -44,6 +47,7 @@ export const NavigationBar = ({ user, onLoggedOut, onSearch }) => {
                 <Nav.Link as={Link} to="/" onClick={() => setQuery('')}>
                   Home
                 </Nav.Link>
+
                 <Nav.Link as={Link} to="/profile">
                   Profile
                 </Nav.Link>
