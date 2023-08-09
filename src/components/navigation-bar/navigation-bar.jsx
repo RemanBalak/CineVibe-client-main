@@ -1,6 +1,7 @@
 import { Navbar, Container, Nav, Form, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import './styles.css';
 
 export const NavigationBar = ({ user, onLoggedOut, onSearch }) => {
   const [query, setQuery] = useState('');
@@ -56,23 +57,13 @@ export const NavigationBar = ({ user, onLoggedOut, onSearch }) => {
                 style={{ color: 'white' }}
                 type="search"
                 placeholder="Search"
-                className="me-2"
+                className="md-2"
                 aria-label="Search"
                 value={query}
                 onChange={(e) => {
                   setQuery(e.target.value);
                 }}
               />
-              <Link to={'/'}>
-                <Button
-                  variant="primary"
-                  onClick={() => {
-                    onSearch(query);
-                  }}
-                >
-                  Search
-                </Button>
-              </Link>
             </Form>
           )}
         </Navbar.Collapse>
