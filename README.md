@@ -19,10 +19,32 @@ The online hosted version of this app can be found here: [CineVibe](https://cine
 
 ## How to setup the application:
 
-`npm install parcel -g`
+1. Install Parcel globally:
 
-`npm install`
+```sh
+   `npm install parcel -g`
+```
 
-How to run the server:
+2. Install project dependencies:
 
-`parcel src/index.html`
+```sh
+   `npm install
+```
+
+## Running the Application:
+
+Once you've completed the setup, you can run the CineVibe application:
+
+```sh
+parcel src/index.html
+```
+
+With these simple instructions, you'll be exploring the world of movies with CineVibe in no time!
+
+## Screenshots
+
+![sreenshot](src/components/media/cinevibe%20home.png)
+
+![sreenshot](src/components/media/cinevibe%20movieview.png)
+
+![sreenshot](src/components/media/cinevibe%20profileview.png)
