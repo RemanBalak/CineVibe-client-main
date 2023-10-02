@@ -22,13 +22,13 @@ The online hosted version of this app can be found here: [CineVibe](https://cine
 1. Install Parcel globally:
 
 ```sh
-   `npm install parcel -g`
+   npm install parcel -g
 ```
 
 2. Install project dependencies:
 
 ```sh
-   `npm install
+   npm install
 ```
 
 ## Running the Application:
